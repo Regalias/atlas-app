@@ -66,7 +66,7 @@ func Run(args []string) int {
 
 	s.routes(lgr)
 
-	lgr.Info().Msg("Atlas API server starting...")
+	lgr.Info().Msg("Atlas server starting...")
 	if err := s.http.ListenAndServe(); err != nil {
 		lgr.Fatal().Err(err).Msg("API Startup failed")
 	}
