@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/regalias/atlas-app/server"
+	"github.com/regalias/atlas-app/appserver"
 )
 
 func main() {
-	os.Exit(server.Run(os.Args[1:]))
+	os.Exit(appserver.Run(os.Args[1:]))
 }

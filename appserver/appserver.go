@@ -1,4 +1,4 @@
-package server
+package appserver
 
 import (
 	"fmt"
@@ -26,7 +26,7 @@ type server struct {
 func Run(args []string) int {
 
 	// Create logger
-	lgr, err := logging.New("debug", "atlas-api", true)
+	lgr, err := logging.New("debug", "atlas-appserver", true)
 	if err != nil {
 		fmt.Printf("Oh noes! Something went horribly wrong!")
 		panic(err)
