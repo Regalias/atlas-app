@@ -42,13 +42,14 @@ func Run(args []string) int {
 		lgr.Fatal().Str("Error", err.Error()).Msg("Database or table was not found and could not create required resources")
 	}
 
-	// Create cache and async task handler
+	// Create a redis cache provider
 	c, err := cache.NewRedisProvider("127.0.0.1", 6379, nil)
 	if err != nil {
 		lgr.Fatal().Msg(err.Error())
 	}
 
 	// Create server context struct
+	// TODO: pull from config
 	s := server{
 		router: r,
 		logger: lgr,
